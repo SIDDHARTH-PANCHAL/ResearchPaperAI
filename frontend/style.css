@@ -1,0 +1,698 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  background: #172554;
+  color: white;
+
+  padding: 20px 6%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-icon {
+  font-size: 35px;
+}
+
+.logo h1 {
+  font-size: 24px;
+}
+
+.logo p {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.header-status {
+  background: #1e3a8a;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.status-dot {
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  background: #4ade80;
+  border-radius: 50%;
+
+  margin-right: 5px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 35px auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.hero h2 {
+  font-size: 30px;
+  color: #172554;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #64748b;
+  max-width: 700px;
+  margin: auto;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+  margin-bottom: 25px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 22px;
+  color: #172554;
+}
+
+.section-heading p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* =========================
+   UPLOAD AREA
+========================= */
+
+.upload-area {
+  border: 2px dashed #94a3b8;
+
+  border-radius: 12px;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  background: #f8fafc;
+
+  margin-bottom: 20px;
+
+  transition: 0.3s;
+}
+
+.upload-area:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.upload-icon {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.upload-area h3 {
+  margin-bottom: 5px;
+}
+
+.upload-area p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.file-name {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2563eb;
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  padding: 11px 18px;
+
+  border-radius: 7px;
+
+  font-weight: bold;
+
+  transition: 0.2s;
+
+  margin-top: 10px;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-success {
+  background: #15803d;
+  color: white;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+/* =========================
+   STATUS MESSAGES
+========================= */
+
+.status-message {
+  margin-top: 15px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.status-message.success {
+  color: #15803d;
+}
+
+.status-message.error {
+  color: #dc2626;
+}
+
+.status-message.loading {
+  color: #2563eb;
+}
+
+
+/* =========================
+   PAPERS LIST
+========================= */
+
+.papers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.paper-item {
+  border: 1px solid #e2e8f0;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.paper-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.paper-info h3 {
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.paper-info p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.paper-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+
+  padding: 8px 12px;
+
+  border-radius: 6px;
+}
+
+.empty-message {
+  color: #64748b;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* =========================
+   AI TOOLS
+========================= */
+
+.tools-section {
+  margin-top: 35px;
+}
+
+.tools-section>h2 {
+  color: #172554;
+  margin-bottom: 5px;
+}
+
+.section-description {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.tool-card h3 {
+  color: #172554;
+  margin-bottom: 8px;
+}
+
+.tool-card p {
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+select,
+textarea {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  background: white;
+
+  outline: none;
+}
+
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+}
+
+textarea {
+  resize: vertical;
+  margin-top: 10px;
+}
+
+
+/* =========================
+   RESULT BOX
+========================= */
+
+.result-box {
+  display: none;
+
+  margin-top: 20px;
+
+  padding: 20px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 8px;
+
+  overflow-wrap: anywhere;
+}
+
+.result-box.show {
+  display: block;
+}
+
+.result-box h3 {
+  margin-bottom: 12px;
+  color: #172554;
+}
+
+.result-box h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.result-box p {
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+.result-box ul {
+  padding-left: 20px;
+}
+
+.result-box li {
+  margin-bottom: 8px;
+}
+
+.result-box pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   COMPARISON CHECKBOXES
+========================= */
+
+.compare-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 15px;
+}
+
+.compare-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+}
+
+.compare-item input {
+  width: 18px;
+  height: 18px;
+}
+
+.compare-item label {
+  margin: 0;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  text-align: center;
+
+  margin-top: 50px;
+  padding: 25px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  .header {
+    padding: 18px 4%;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .paper-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .paper-actions {
+    width: 100%;
+  }
+
+}
+
+/* =====================================
+   MARKDOWN CONTENT
+===================================== */
+
+.markdown-content {
+  width: 100%;
+  line-height: 1.8;
+  color: #334155;
+  overflow-wrap: anywhere;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+  color: #172554;
+  margin-top: 22px;
+  margin-bottom: 12px;
+}
+
+.markdown-content h1 {
+  font-size: 25px;
+}
+
+.markdown-content h2 {
+  font-size: 21px;
+}
+
+.markdown-content h3 {
+  font-size: 18px;
+}
+
+.markdown-content p {
+  margin-bottom: 14px;
+}
+
+.markdown-content strong {
+  color: #172554;
+  font-weight: 700;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 25px;
+  margin: 12px 0 18px;
+}
+
+.markdown-content li {
+  margin-bottom: 8px;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #2563eb;
+  padding: 12px 18px;
+  background: #eff6ff;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+
+/* =====================================
+   COMPARISON TABLE
+===================================== */
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+
+  background: white;
+
+  border: 1px solid #cbd5e1;
+}
+
+.markdown-content th {
+  background: #172554;
+  color: white;
+
+  padding: 14px;
+
+  text-align: left;
+
+  font-weight: 600;
+}
+
+.markdown-content td {
+  padding: 13px;
+
+  border: 1px solid #e2e8f0;
+
+  vertical-align: top;
+}
+
+.markdown-content tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.markdown-content tr:hover {
+  background: #eff6ff;
+}
+
+
+/* =====================================
+   CODE BLOCK
+===================================== */
+
+.markdown-content pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+
+  background: #f1f5f9;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  overflow-x: auto;
+}
+
+.markdown-content code {
+  background: #e2e8f0;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+
+/* =====================================
+   HORIZONTAL SCROLL FOR TABLES
+===================================== */
+
+.markdown-content table {
+  display: block;
+  overflow-x: auto;
+}
+
+
+/* =====================================
+   MOBILE TABLE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .markdown-content table {
+    font-size: 13px;
+  }
+
+  .markdown-content th,
+  .markdown-content td {
+    padding: 9px;
+    min-width: 120px;
+  }
+
+}

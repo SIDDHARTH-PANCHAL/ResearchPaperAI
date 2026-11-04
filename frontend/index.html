@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Research Paper Intelligence</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo">
+      <span class="logo-icon">📚</span>
+
+      <div>
+        <h1>Research Paper AI</h1>
+        <p>Research Paper Intelligence & Innovation Finder</p>
+      </div>
+    </div>
+
+    <div class="header-status">
+      <span class="status-dot"></span>
+      AI Research Assistant
+    </div>
+
+  </header>
+
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+
+    <!-- INTRO -->
+    <section class="hero">
+
+      <h2>Explore Research Papers with AI</h2>
+
+      <p>
+        Upload research papers, generate summaries, ask questions,
+        compare papers and discover potential research gaps.
+      </p>
+
+    </section>
+
+
+    <!-- UPLOAD SECTION -->
+    <section class="card upload-card">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>📄 Upload Research Paper</h2>
+
+          <p>Upload your PDF research paper to get started.</p>
+        </div>
+
+      </div>
+
+      <div class="upload-area" id="uploadArea">
+
+        <div class="upload-icon">📁</div>
+
+        <h3>Choose your research paper</h3>
+
+        <p>Only PDF files are supported</p>
+
+        <input type="file" id="pdfInput" accept=".pdf,application/pdf" hidden>
+
+        <button class="btn btn-primary" id="chooseFileBtn">
+          Choose PDF
+        </button>
+
+        <p id="selectedFileName" class="file-name"></p>
+
+      </div>
+
+      <button class="btn btn-success full-width" id="uploadBtn" disabled>
+        Upload & Process PDF
+      </button>
+
+      <div id="uploadStatus" class="status-message"></div>
+
+    </section>
+
+
+    <!-- PAPERS SECTION -->
+    <section class="card">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>📚 Uploaded Papers</h2>
+
+          <p>Your uploaded research papers.</p>
+        </div>
+
+        <button class="btn btn-secondary" id="refreshPapersBtn">
+          Refresh
+        </button>
+
+      </div>
+
+      <div id="papersList" class="papers-list">
+
+        <p class="empty-message">
+          No papers uploaded yet.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- AI TOOLS -->
+    <section class="tools-section">
+
+      <h2>🧠 AI Research Tools</h2>
+
+      <p class="section-description">
+        Select an uploaded paper and choose an AI tool.
+      </p>
+
+
+      <!-- SELECT PAPER -->
+      <div class="card">
+
+        <label for="paperSelect">
+          Select Research Paper
+        </label>
+
+        <select id="paperSelect">
+
+          <option value="">
+            Select a paper first
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- SUMMARY -->
+      <div class="card tool-card">
+
+        <h3>📝 Research Paper Summary</h3>
+
+        <p>
+          Generate a structured summary of your research paper.
+        </p>
+
+        <button class="btn btn-primary" id="summaryBtn">
+          Generate Summary
+        </button>
+
+        <div id="summaryResult" class="result-box"></div>
+
+      </div>
+
+
+      <!-- QUESTION ANSWERING -->
+      <div class="card tool-card">
+
+        <h3>💬 Ask Questions</h3>
+
+        <p>
+          Ask questions about the uploaded research paper.
+        </p>
+
+        <textarea id="questionInput" placeholder="Example: What methodology is used in this paper?" rows="4"></textarea>
+
+        <button class="btn btn-primary" id="askBtn">
+          Ask AI
+        </button>
+
+        <div id="answerResult" class="result-box"></div>
+
+      </div>
+
+
+      <!-- RESEARCH GAP -->
+      <div class="card tool-card">
+
+        <h3>🔍 Research Gap Finder</h3>
+
+        <p>
+          Identify potential research gaps and future research directions.
+        </p>
+
+        <button class="btn btn-primary" id="researchGapBtn">
+          Find Research Gaps
+        </button>
+
+        <div id="researchGapResult" class="result-box"></div>
+
+      </div>
+
+
+      <!-- PAPER COMPARISON -->
+      <div class="card tool-card">
+
+        <h3>⚖️ Compare Research Papers</h3>
+
+        <p>
+          Select at least two papers to compare their methodologies,
+          datasets, results and limitations.
+        </p>
+
+        <div id="comparePaperList" class="compare-list">
+
+          <p class="empty-message">
+            Upload papers to enable comparison.
+          </p>
+
+        </div>
+
+        <button class="btn btn-primary" id="compareBtn">
+          Compare Selected Papers
+        </button>
+
+        <div id="compareResult" class="result-box"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <p>
+        Research Paper Intelligence & Innovation Finder
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <!-- JAVASCRIPT -->
+  <!-- Markdown Renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- HTML Sanitizer -->
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
