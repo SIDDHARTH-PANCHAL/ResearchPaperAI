@@ -2,7 +2,7 @@
 // BACKEND API URL
 // =====================================
 
-const API_URL = "https://researchpaperai-production-2790.up.railway.app/";
+const API_URL = "https://researchpaperai-production-2790.up.railway.app";
 
 
 // =====================================
