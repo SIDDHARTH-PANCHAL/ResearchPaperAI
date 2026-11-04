@@ -22,7 +22,28 @@ groq_client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 # EMBEDDING MODEL
 # =========================
 
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+
+# =========================
+# EMBEDDING MODEL
+# =========================
+
+embedding_model = None
+
+
+def get_embedding_model():
+    global embedding_model
+
+    if embedding_model is None:
+        print("Loading Sentence Transformer model...")
+
+        embedding_model = SentenceTransformer(
+            "all-MiniLM-L6-v2"
+        )
+
+        print("Sentence Transformer model loaded!")
+
+    return embedding_model
+
 
 
 # =========================
@@ -107,18 +128,29 @@ def split_into_chunks(pages, chunk_size=1000, overlap=200):
 # GENERATE EMBEDDINGS
 # =========================
 
+
+# =========================
+# GENERATE EMBEDDINGS
+# =========================
+
 def embed_texts(texts):
 
     if not texts:
         return np.empty((0, 384), dtype="float32")
 
-    embeddings = embedding_model.encode(
+    model = get_embedding_model()
+
+    embeddings = model.encode(
         texts,
         convert_to_numpy=True,
-        normalize_embeddings=True
+        normalize_embeddings=True,
+        show_progress_bar=False
     )
 
-    return np.asarray(embeddings, dtype="float32")
+    return np.asarray(
+        embeddings,
+        dtype="float32"
+    )
 
 
 # =========================
